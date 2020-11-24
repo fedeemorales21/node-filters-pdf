@@ -1,15 +1,39 @@
 <div class="row">
+    <div class="col-md-8 offset-md-2">
+
+        <form class="form-inline" action="/filters"  method="POST">
+            <div class="form-group">
+                <label for="formControlRange">Maximum price</label>
+                <input type="range" class="form-control-range" id="maxprice" name="maxprice" onInput="$('#rangeval').html($(this).val())">
+                <span id="rangeval">50</span>
+            </div>
+
+            <div class="form-check form-check-inline ml-3">
+                <input class="form-check-input" type="radio" name="order" id="inlineRadio1" value="1">
+                <label class="form-check-label" for="inlineRadio1">Oldest</label>
+            </div>
+            <div class="form-check form-check-inline mr-3">
+                <input class="form-check-input" type="radio" name="order" id="inlineRadio2" value="-1" checked>
+                <label class="form-check-label" for="inlineRadio2">Lastest</label>
+            </div>
+
+            <input type="submit" value="Search" class="btn btn-primary">
+        </form>
+    </div>
+
+
     {{#each products}}
-        <div class="col-md-4 col-sm-12">
-            <div class="card">
-                <div class="card-header">
-                    {{name}}
-                </div>
-                <div class="card-body">
-                    <p>{{description}}</p>
-                    <span>{{price}}</span>
-                </div>               
+    <div class="col-md-4 col-sm-12">
+        <div class="card">
+            <div class="card-header">
+                {{name}}
+            </div>
+            <div class="card-body">
+                <p>{{description}}</p>
+                <span>{{price}}</span>
+                <p>{{createdAt}}</p>
             </div>
         </div>
+    </div>
     {{/each}}
 </div>

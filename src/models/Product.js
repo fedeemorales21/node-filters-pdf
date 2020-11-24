@@ -10,9 +10,11 @@ productSchema = new Schema({
         required: true
     },
     price: {
-        type: Number,
+        type: String,
         required: true
     }
+},{
+    timestamps: true
 })
 
 module.exports = model('Product', productSchema)
