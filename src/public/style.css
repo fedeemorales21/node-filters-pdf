@@ -1,0 +1,9 @@
+.float {
+    display:scroll;
+    position:fixed;
+    bottom:40px;
+    right:40px;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+}

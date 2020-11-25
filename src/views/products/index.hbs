@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row" id="results">
     <div class="col-md-8 offset-md-2">
 
         <form class="form-inline" action="/filters"  method="POST">
@@ -36,4 +36,8 @@
         </div>
     </div>
     {{/each}}
+
+    <form id="print">
+        <input type="submit" class="btn btn-primary float" value="Print">
+    </form>
 </div>
